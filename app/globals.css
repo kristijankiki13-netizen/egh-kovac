@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #0a1428;
+}
+
+::selection {
+  background-color: #1d335b;
+  color: #ffffff;
+}
+
+@layer utilities {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-6 lg:px-10;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .form-input {
+    @apply block w-full rounded-xl border border-navy-100 bg-white px-4 py-3 text-sm text-navy-900 shadow-sm outline-none transition-all placeholder:text-navy-700/40 hover:border-navy-200 focus:border-sky-400 focus:ring-4 focus:ring-sky-100;
+  }
+}
