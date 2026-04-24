@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, ShieldCheck } from "lucide-react";
+import { BlueprintImage } from "./BlueprintImage";
 
 export function Hero() {
   return (
@@ -9,14 +10,16 @@ export function Hero() {
       id="top"
       className="relative isolate flex min-h-[100svh] items-center overflow-hidden"
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&w=2400&q=80"
-        alt="Industrijski rashladni sustav"
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
+      {/* SLOT A — Yard with fleet (replace `src` with client's real photo) */}
+      <BlueprintImage
+        slot="A"
+        src="/images/slot-a-yard.jpg"
+        alt="Dvorište s voznim parkom EGH Kovač"
+        className="absolute inset-0 -z-10"
+        overlayClassName="bg-blue-950/40"
       />
 
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-navy-950/90 via-navy-900/85 to-navy-800/70" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-navy-950/80 via-navy-900/70 to-navy-800/50" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,rgba(125,200,255,0.18),transparent_55%)]" />
 
       <div className="container-x relative pt-32 pb-20 md:pt-36 md:pb-28">
@@ -27,7 +30,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-ice-100/90 backdrop-blur"
         >
           <ShieldCheck className="h-3.5 w-3.5" />
-          Obiteljska tradicija od 2005.
+          Obiteljska tradicija od 1997.
         </motion.div>
 
         <motion.h1
@@ -48,8 +51,9 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="mt-6 max-w-2xl text-balance text-base leading-relaxed text-ice-100/85 md:text-lg"
         >
-          Obiteljska tradicija i stručnost od 2005. godine. Od montaže do
-          održavanja, brinemo o vašem poslovanju s pažnjom i kvalitetom.
+          Obiteljska tradicija i stručnost — Obrt EGH od 1997., tvrtka EGH
+          Kovač od 12.01.2006. Od montaže do održavanja, brinemo o vašem
+          poslovanju s pažnjom i kvalitetom.
         </motion.p>
 
         <motion.div
@@ -81,9 +85,9 @@ export function Hero() {
           className="mt-14 grid max-w-3xl grid-cols-3 gap-6 border-t border-white/10 pt-8"
         >
           {[
-            { k: "20+", v: "godina iskustva" },
+            { k: "25+", v: "godina iskustva" },
             { k: "10", v: "stalno zaposlenih" },
-            { k: "RH", v: "pokrivenost terena" },
+            { k: "100 km", v: "oko Zagreba" },
           ].map((s) => (
             <div key={s.v}>
               <div className="text-2xl font-bold text-white md:text-3xl">

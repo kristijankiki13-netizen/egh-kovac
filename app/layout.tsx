@@ -11,12 +11,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "EGH Kovač | Rashladni sustavi i logistika",
   description:
-    "Obiteljska tvrtka za servis, prodaju i montažu rashladnih sustava, uz vlastiti vozni park za prijevoz i skladištenje robe diljem Hrvatske.",
+    "Obiteljska tvrtka za servis, prodaju i montažu rashladnih sustava, uz vlastiti vozni park za prijevoz i skladištenje robe u Zagrebu i okolici (do 100 km).",
   metadataBase: new URL("https://egh-kovac.hr"),
   openGraph: {
     title: "EGH Kovač | Rashladni sustavi i logistika",
     description:
-      "Pouzdan partner za rashladne sustave od 2005. godine. Servis, prodaja, montaža i prijevoz.",
+      "Pouzdan partner za rashladne sustave. Obrt EGH od 1997., tvrtka EGH Kovač od 12.01.2006. Servis, prodaja, montaža i prijevoz.",
     locale: "hr_HR",
     type: "website",
   },

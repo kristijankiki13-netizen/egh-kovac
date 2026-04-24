@@ -2,6 +2,7 @@
 
 import { Award, HeartHandshake, MapPin } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { BlueprintImage } from "./BlueprintImage";
 
 const values = [
   {
@@ -17,7 +18,7 @@ const values = [
   {
     Icon: MapPin,
     title: "Lokalna prisutnost",
-    text: "Sjedište u Zagrebu, intervencije diljem Hrvatske.",
+    text: "Sjedište u Zagrebu, intervencije u radijusu do 100 km.",
   },
 ];
 
@@ -29,32 +30,22 @@ export function About() {
           <Reveal className="lg:col-span-6">
             <div className="relative">
               <div className="absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-to-br from-sky-200/60 via-ice-100 to-transparent blur-2xl" />
-              <div className="relative overflow-hidden rounded-3xl border border-navy-100 shadow-ring">
-                <div className="relative aspect-[4/5] w-full">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=80"
-                    alt="Tim inženjera EGH Kovač"
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                </div>
-              </div>
 
-              <div className="absolute -left-5 -top-5 hidden h-40 w-40 overflow-hidden rounded-2xl border-4 border-white shadow-ring md:block lg:h-48 lg:w-48">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80"
-                  alt="Industrijska HVAC oprema"
-                  className="h-full w-full object-cover"
-                />
-              </div>
+              {/* SLOT C — Scissor lifts / Platforms (replace `src` with client's real photo) */}
+              <BlueprintImage
+                slot="C"
+                src="/images/slot-c-platforms.jpg"
+                alt="Platforma i oprema EGH Kovač"
+                className="aspect-[4/5] w-full rounded-3xl border border-navy-100 shadow-ring"
+                overlayClassName="bg-blue-950/40"
+              />
 
               <div className="absolute -bottom-6 -right-4 hidden w-64 rounded-2xl border border-navy-100 bg-white p-5 shadow-ring md:block">
                 <div className="text-xs font-semibold uppercase tracking-wider text-sky-600">
-                  Od 2005.
+                  Od 12.01.2006.
                 </div>
                 <div className="mt-1 text-sm font-medium text-navy-900">
-                  Više od dva desetljeća pouzdane usluge za hrvatska poduzeća.
+                  Obiteljsko naslijeđe još od 1997. godine kao Obrt EGH.
                 </div>
               </div>
             </div>
@@ -73,17 +64,18 @@ export function About() {
             <Reveal delay={0.05}>
               <div className="mt-6 space-y-5 text-base leading-relaxed text-navy-800/85 md:text-lg">
                 <p>
-                  EGH Kovač osnovan je <strong>2005. godine</strong> u Zagrebu, na
-                  adresi <strong>Fallerovo šetalište 86</strong>, kao mala
-                  obiteljska radionica posvećena rashladnim sustavima. Iz
-                  generacije u generaciju razvili smo se u pouzdanog partnera
-                  trgovinama, ugostiteljstvu, industriji i logistici diljem
-                  Hrvatske.
+                  Naša obiteljska priča započela je <strong>1997. godine</strong>{" "}
+                  kao <strong>Obrt EGH</strong>, koji je poslovao sve do
+                  2006. godine. <strong>12.01.2006.</strong> službeno je osnovana
+                  tvrtka <strong>EGH Kovač</strong> sa sjedištem u Zagrebu, na
+                  adresi <strong>Fallerovo šetalište 86</strong>.
                 </p>
                 <p>
-                  Naš je pristup jednostavan: slušamo, savjetujemo i isporučujemo
-                  rješenja koja traju. Vjerujemo da se kvaliteta gradi odnosima
-                  — s klijentima, dobavljačima i ljudima u našem timu.
+                  Iz generacije u generaciju razvili smo se u pouzdanog partnera
+                  trgovinama, ugostiteljstvu, industriji i logistici u{" "}
+                  <strong>Zagrebu i okolici (do 100 km udaljenosti)</strong>. Naš
+                  je pristup jednostavan: slušamo, savjetujemo i isporučujemo
+                  rješenja koja traju.
                 </p>
               </div>
             </Reveal>
@@ -93,7 +85,7 @@ export function About() {
                 <Reveal
                   key={v.title}
                   delay={0.1 + i * 0.06}
-                  className="rounded-2xl border border-navy-100 bg-white p-5 shadow-soft"
+                  className="rounded-2xl border border-navy-100 bg-white p-5 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:border-navy-200 hover:shadow-ring"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-navy-900 text-ice-100">
                     <v.Icon className="h-5 w-5" strokeWidth={2.2} />

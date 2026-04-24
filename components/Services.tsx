@@ -37,9 +37,9 @@ const services: Service[] = [
     Icon: Boxes,
   },
   {
-    title: "Prijevoz po RH",
+    title: "Prijevoz Zagreb i okolica",
     description:
-      "Vlastiti vozni park — kamion i kombiji za siguran prijevoz rashladne opreme diljem Hrvatske.",
+      "Vlastiti vozni park — kamion i kombiji za siguran prijevoz rashladne opreme u radijusu do 100 km od Zagreba.",
     Icon: Truck,
   },
   {
