@@ -8,7 +8,7 @@ type BlueprintImageProps = {
   className?: string;
   /** Classes for the inner <img> (object-fit, object-position tweaks). */
   imgClassName?: string;
-  /** Optional override for the navy overlay (default: bg-blue-950/40). */
+  /** Optional override for the navy overlay (default: bg-blue-900/20). */
   overlayClassName?: string;
   /** Optional slot label rendered only in development for easy QA. */
   slot?: "A" | "B" | "C";
@@ -32,7 +32,7 @@ export function BlueprintImage({
   alt,
   className = "",
   imgClassName = "",
-  overlayClassName = "bg-blue-950/40",
+  overlayClassName = "bg-blue-900/20",
   slot,
 }: BlueprintImageProps) {
   return (

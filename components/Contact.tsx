@@ -157,6 +157,11 @@ function ContactForm() {
             name="_subject"
             value="Novi upit s web stranice EGH Kovač"
           />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://egh-kovac.vercel.app/"
+          />
           <input type="text" name="_honey" className="hidden" tabIndex={-1} />
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

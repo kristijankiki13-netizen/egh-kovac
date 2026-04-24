@@ -37,7 +37,7 @@ export function About() {
                 src="/images/slot-c-platforms.jpg"
                 alt="Platforma i oprema EGH Kovač"
                 className="aspect-[4/5] w-full rounded-3xl border border-navy-100 shadow-ring"
-                overlayClassName="bg-blue-950/40"
+                overlayClassName="bg-blue-900/20"
               />
 
               <div className="absolute -bottom-6 -right-4 hidden w-64 rounded-2xl border border-navy-100 bg-white p-5 shadow-ring md:block">

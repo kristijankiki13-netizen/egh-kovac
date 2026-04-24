@@ -1,6 +1,14 @@
 "use client";
 
-import { Truck, TruckIcon, Forklift, Layers, MapPin, Users } from "lucide-react";
+import {
+  Truck,
+  TruckIcon,
+  Forklift,
+  Layers,
+  MapPin,
+  Users,
+  CheckCircle2,
+} from "lucide-react";
 import { Reveal } from "./Reveal";
 import { BlueprintImage } from "./BlueprintImage";
 
@@ -47,6 +55,17 @@ export function Infrastructure() {
               Zagreb i okolica (do 100 km)
             </span>
           </div>
+
+          <div className="mt-6 flex items-start gap-3 rounded-2xl border border-emerald-400/20 bg-emerald-400/[0.06] p-4 backdrop-blur sm:p-5">
+            <CheckCircle2
+              className="mt-0.5 h-5 w-5 flex-shrink-0 text-emerald-400"
+              strokeWidth={2.2}
+            />
+            <p className="text-sm leading-relaxed text-ice-100/90 sm:text-[0.95rem]">
+              <strong className="text-white">Ovlašteni serviseri</strong> i
+              nositelji stručnih certifikata za rad s rashladnim sustavima.
+            </p>
+          </div>
         </Reveal>
 
         <div className="mt-14 grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-8">
@@ -58,7 +77,7 @@ export function Infrastructure() {
                 src="/images/slot-b-man-truck.jpg"
                 alt="MAN kamion — vozni park EGH Kovač"
                 className="aspect-[4/3] w-full sm:aspect-[16/10] lg:aspect-auto lg:h-full"
-                overlayClassName="bg-blue-950/40"
+                overlayClassName="bg-blue-900/20"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">

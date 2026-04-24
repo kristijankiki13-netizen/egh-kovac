@@ -15,6 +15,7 @@ type Service = {
   title: string;
   description: string;
   Icon: LucideIcon;
+  highlight?: boolean;
 };
 
 const services: Service[] = [
@@ -53,6 +54,7 @@ const services: Service[] = [
     description:
       "Brza reakcija u slučaju kvara — dežurni tim dostupan je u svako doba kako bi vaš sustav opet bio u pogonu.",
     Icon: Zap,
+    highlight: true,
   },
 ];
 
@@ -78,11 +80,37 @@ export function Services() {
             <Reveal
               key={s.title}
               delay={i * 0.05}
-              className="group relative overflow-hidden rounded-2xl border border-navy-100 bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-navy-200 hover:shadow-ring"
+              className={`group relative overflow-hidden rounded-2xl border bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-ring ${
+                s.highlight
+                  ? "border-red-500/30 ring-1 ring-red-500/10 hover:border-red-500/50"
+                  : "border-navy-100 hover:border-navy-200"
+              }`}
             >
-              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-300 via-sky-500 to-navy-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div
+                className={`absolute inset-x-0 top-0 h-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${
+                  s.highlight
+                    ? "bg-gradient-to-r from-red-400 via-red-500 to-red-600"
+                    : "bg-gradient-to-r from-sky-300 via-sky-500 to-navy-700"
+                }`}
+              />
 
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-ice-100 text-navy-800 ring-1 ring-inset ring-navy-100 transition-colors group-hover:bg-navy-900 group-hover:text-ice-100 group-hover:ring-navy-900">
+              {s.highlight && (
+                <span className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-red-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-red-600 ring-1 ring-inset ring-red-500/20">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-75" />
+                    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-red-500" />
+                  </span>
+                  24/7
+                </span>
+              )}
+
+              <div
+                className={`flex h-12 w-12 items-center justify-center rounded-xl ring-1 ring-inset transition-colors ${
+                  s.highlight
+                    ? "bg-red-50 text-red-600 ring-red-500/20 group-hover:bg-red-600 group-hover:text-white group-hover:ring-red-600"
+                    : "bg-ice-100 text-navy-800 ring-navy-100 group-hover:bg-navy-900 group-hover:text-ice-100 group-hover:ring-navy-900"
+                }`}
+              >
                 <s.Icon className="h-6 w-6" strokeWidth={2} />
               </div>
 

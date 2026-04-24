@@ -16,7 +16,7 @@ export function Hero() {
         src="/images/slot-a-yard.jpg"
         alt="Dvorište s voznim parkom EGH Kovač"
         className="absolute inset-0 -z-10"
-        overlayClassName="bg-blue-950/40"
+        overlayClassName="bg-blue-900/20"
       />
 
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-navy-950/80 via-navy-900/70 to-navy-800/50" />
